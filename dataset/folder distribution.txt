@@ -1,0 +1,7 @@
+|--dataset
+   |--train
+      |--syn
+      |--target
+  |--test
+      |--syn
+      |--target
