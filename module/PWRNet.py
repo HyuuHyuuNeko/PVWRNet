@@ -14,12 +14,6 @@ def conv(in_channels, out_channels, kernel_size, bias=False, stride=1):
 # ----------------------------------------------------------------------------------------------------
 # Residual Channel Attention Block
 class ResCAB(nn.Module):
-    """
-              ↑------------------------------------------->↓
-              ↑------------>[Conv3x3]------------->↓       ↓
-              ↑------------>[Conv1x1]------------->↓       ↓
-        INPUT => [Conv3x3] => [Swish] => [Conv3x3] => [CA] => OUTPUT
-    """
 
     def __init__(self, n_feat, kernel_size, reduction=16, bias=False):
         super(ResCAB, self).__init__()
@@ -46,10 +40,6 @@ class ResCAB(nn.Module):
 # ----------------------------------------------------------------------------------------------------
 # Encode-Decode Conv Block
 class EDConvBlock(nn.Module):
-    """
-              ↑---------------->[Conv1x1]----------------->↓
-        INPUT => [Conv3x3] => [PReLU] => [Conv3x3] => [CA] => OUTPUT
-    """
 
     def __init__(self, n_feat, kernel_size=3, reduction=16, bias=False):
         super(EDConvBlock, self).__init__()
@@ -405,15 +395,17 @@ if __name__ == '__main__':
 
     net = PWRNet()
 
-    # 6,877,715
+    """ 6,877,715 """
     # print(get_parameter_number(net))
 
 
-    # Total params: 6,803,987
-    # Total memory: 4142.13MB
-    # Total MAdd: 623.05GMAdd
-    # Total Flops: 311.97GFlops
-    # Total MemR+W: 6.14GB
+    """ 
+        Total params: 6,803,987
+        Total memory: 4142.13MB
+        Total MAdd: 623.05GMAdd
+        Total Flops: 311.97GFlops
+        Total MemR+W: 6.14GB
+    """
     # stat(net, (3, 256, 256))
 
     # from torchkeras import summary
