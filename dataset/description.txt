@@ -1,3 +1,5 @@
+Folder hierarchy description：
+
 |--dataset
    |--train
       |--syn
