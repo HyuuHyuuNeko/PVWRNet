@@ -12,4 +12,3 @@ def npPSNR(img_ture, img_pred):
     diff = np.float32(img_pred) - np.float32(img_ture)
     mse = np.mean(np.square(diff))
     return 10 * np.log10(255 * 255 / mse)
-
