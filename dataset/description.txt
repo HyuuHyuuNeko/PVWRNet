@@ -1,13 +1,3 @@
-Folder hierarchy description：
-
-|--dataset
-   |--train
-      |--syn
-      |--target
-  |--test
-      |--syn
-      |--target
-
 This folder is used to store the dataset for the neural network models. The folder structure of the dataset is as follows:
 
 |--dataset/
