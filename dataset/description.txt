@@ -7,3 +7,32 @@ Folder hierarchy description：
   |--test
       |--syn
       |--target
+
+This folder is used to store the dataset for the neural network models. The folder structure of the dataset is as follows:
+
+|--dataset/
+   |--train/
+      |--syn/
+         000001.jpg
+         000002.jpg
+         ...
+      |--target/
+         000001.jpg
+         000002.jpg
+         ...
+   |--test/
+      |--syn/
+         000001.jpg
+         000002.jpg
+         ...
+      |--target/
+         000001.jpg
+         000002.jpg
+         ...
+···
+In the `dataset`, there are three main subfolders: `train`, `validation`, and `test`. 
+
+The `train` folder contains subfolders for each class in the dataset, where the images belonging to that class are stored.
+The `test` folder contains the images that are used to evaluate the trained model's performance.
+
+Each image in the dataset is typically represented as a file (e.g., `000001.jpg`, `000002.jpg`) within the corresponding class folder.
